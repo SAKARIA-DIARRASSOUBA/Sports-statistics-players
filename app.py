@@ -3,14 +3,14 @@ import pandas as pd
 import numpy as np
 import joblib 
 
-with open('classifier.model','rb') as file:
+with open('Classifier','rb') as file:
 
     model=joblib.load(file)
 
-with open("MinMaxScaler","rb") as f:
+with open("MinMaxScalers","rb") as f:
     normalizer=joblib.load(f)
 
-print("flask version",flask.__version__)
+
 app = Flask(__name__)
 
 @app.route('/',methods=['GET'])
